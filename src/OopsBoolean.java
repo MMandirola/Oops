@@ -1,5 +1,6 @@
 
 public class OopsBoolean extends OopsObject{
+
 	private boolean value;
 	public boolean isValue() {
 		return value;
