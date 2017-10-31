@@ -11,11 +11,21 @@ public class OopsBoolean extends OopsObject{
 		this.value = value;
 	}
 	public OopsObject respond(String name, OopsObject[] args) {
-//		switch{
-//			case "!":
-//				return OopsBoolean()
-//		}
-		return null;
+		switch(name){
+			case "!":
+				return new OopsBoolean(!this.value);
+			case "&&":
+				OopsBoolean b = (OopsBoolean) args[0];
+				boolean value = b.isValue() && this.value;
+				return new OopsBoolean(value);
+			case "||":
+				OopsBoolean b1 = (OopsBoolean) args[0];
+				boolean value1 = b1.isValue() || this.value;
+				return new OopsBoolean(value1);
+			default:
+				return null;
+				
+		}
 	}
 
 }
