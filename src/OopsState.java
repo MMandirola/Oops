@@ -1,5 +1,4 @@
 
-import com.sun.xml.internal.bind.v2.runtime.unmarshaller.XsiNilLoader;
 import java.util.HashMap;
 
 /*
@@ -12,8 +11,10 @@ import java.util.HashMap;
  *
  * @author emanuel
  */
-public abstract class OopsCode {
+public class OopsState {
     
-    public abstract OopsObject evaluate(OopsState state);
+    
+    public HashMap<String,OopsObject> state;
+    
     
 }
