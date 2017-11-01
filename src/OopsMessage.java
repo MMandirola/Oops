@@ -6,10 +6,10 @@ public class OopsMessage extends OopsCode{
    
     
     private String selector;
-    private OopsObject[] args;
-    private OopsObject receiver;
+    private OopsCode[] args;
+    private OopsCode receiver;
     
-    public OopsMessage(String xselector, OopsObject[] xargs, OopsObject xreceiver ){
+    public OopsMessage(String xselector, OopsCode[] xargs, OopsCode xreceiver ){
             this.selector = xselector;
             this.args = xargs;
             this.receiver = xreceiver;
@@ -33,34 +33,39 @@ public class OopsMessage extends OopsCode{
     /**
      * @return the args
      */
-    public OopsObject[] getArgs() {
+    public OopsCode[] getArgs() {
         return args;
     }
 
     /**
      * @param args the args to set
      */
-    public void setArgs(OopsObject[] args) {
+    public void setArgs(OopsCode[] args) {
         this.args = args;
     }
     
     /**
      * @return the receiver
      */
-    public OopsObject getReceiver() {
+    public OopsCode getReceiver() {
         return receiver;
     }
 
     /**
      * @param receiver the receiver to set
      */
-    public void setReceiver(OopsObject receiver) {
+    public void setReceiver(OopsCode receiver) {
         this.receiver = receiver;
     }
 
     @Override
-    public OopsObject evaluate() {
-        return receiver.respond(selector, args);
+    public OopsObject evaluate(OopsState state) {
+    	OopsObject callee = this.receiver.evaluate(state);
+    	OopsObject[] results = new OopsObject[this.args.length];
+    	for(int i=0;i<this.args.length;i++){
+    		results[i] = this.args[i].evaluate(state);
+    	}
+        return callee.respond(selector, results);
     }
     
     
