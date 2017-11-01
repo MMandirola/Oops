@@ -1,7 +1,7 @@
 
 public class OopsInteger extends OopsObject{
 
-	Integer value;
+	private Integer value;
 	
 	public Integer getValue() {
 		return value;
@@ -22,19 +22,25 @@ public class OopsInteger extends OopsObject{
 		switch(name){
 			case "+":
 				result = new OopsInteger(this.value + firstArg.getValue());
+				break;
 			case "-":
 				result = new OopsInteger(this.value - firstArg.getValue());
+				break;
 			case "*":
 				result = new OopsInteger(this.value * firstArg.getValue());
+				break;
 			case "<=":
 				result = new OopsBoolean(this.value <= firstArg.getValue());
+				break;
 			case "==":
 				result = new OopsBoolean(this.value == firstArg.getValue());
+				break;
 			case "!=":
 				result = new OopsBoolean(this.value != firstArg.getValue());
+				break;
 		}
 		
 		return result;
-	}
+	}	
 	
 }
