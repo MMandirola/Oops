@@ -24,7 +24,7 @@ public class OopsBoolean extends OopsObject{
 				boolean value1 = b1.isValue() || this.value;
 				return new OopsBoolean(value1);
 			default:
-				return this.value;
+				return this;
 				
 		}
 	}
