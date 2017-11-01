@@ -1,6 +1,21 @@
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class OopsInteger extends OopsObject{
 
+	private static final Map<String, OopsMethod> methodReference;
+    static
+    {
+    	methodReference = new HashMap<String, OopsMethod>();
+    	methodReference.put("+", new OopsSum());
+    	methodReference.put("-", new OopsSub());
+    	methodReference.put("*", new OopsTimes());
+    	methodReference.put("<=", new OopsLTE());
+    	methodReference.put("==", new OopsEquals());
+    	methodReference.put("!=", new OopsDistinct());
+    }
+	
 	private Integer value;
 	
 	public Integer getValue() {
@@ -17,27 +32,11 @@ public class OopsInteger extends OopsObject{
 
 	public OopsObject respond(String name, OopsObject[] args) {
 		OopsObject result = null;
-		OopsInteger firstArg = (OopsInteger) args[0];
 		
-		switch(name){
-			case "+":
-				result = new OopsInteger(this.value + firstArg.getValue());
-				break;
-			case "-":
-				result = new OopsInteger(this.value - firstArg.getValue());
-				break;
-			case "*":
-				result = new OopsInteger(this.value * firstArg.getValue());
-				break;
-			case "<=":
-				result = new OopsBoolean(this.value <= firstArg.getValue());
-				break;
-			case "==":
-				result = new OopsBoolean(this.value == firstArg.getValue());
-				break;
-			case "!=":
-				result = new OopsBoolean(this.value != firstArg.getValue());
-				break;
+		if(methodReference.containsKey(name)){
+			result = methodReference.get(name).evaluate(this, args);
+		}else{
+			result = this;
 		}
 		
 		return result;
