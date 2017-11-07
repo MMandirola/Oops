@@ -14,7 +14,11 @@ import java.util.HashMap;
 public class OopsState {
     
     
-    public HashMap<String,OopsObject> state;
+	public OopsState(HashMap<String, OopsObject> myState) {
+		this.state = myState;
+	}
+
+	public HashMap<String,OopsObject> state;
     
     
 }

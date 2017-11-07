@@ -9,7 +9,8 @@ public class OopsMessage extends OopsCode{
     private OopsCode[] args;
     private OopsCode receiver;
     
-    public OopsMessage(String xselector, OopsCode[] xargs, OopsCode xreceiver ){
+    public OopsMessage(String xselector, OopsCode[] xargs, OopsCode xreceiver, OopsClass clase){
+    		super(clase);
             this.selector = xselector;
             this.args = xargs;
             this.receiver = xreceiver;
@@ -46,7 +47,7 @@ public class OopsMessage extends OopsCode{
     
     /**
      * @return the receiver
-     */
+     */// TODO Auto-generated constructor stub
     public OopsCode getReceiver() {
         return receiver;
     }
@@ -65,7 +66,7 @@ public class OopsMessage extends OopsCode{
     	for(int i=0;i<this.args.length;i++){
     		results[i] = this.args[i].evaluate(state);
     	}
-        return callee.respond(selector, results);
+        return callee.respond(selector, results, state);
     }
     
     

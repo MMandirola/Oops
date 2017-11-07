@@ -11,8 +11,13 @@ import java.util.HashMap;
  *
  * @author emanuel
  */
-public abstract class OopsCode {
+public abstract class OopsCode extends OopsObject{
     
-    public abstract OopsObject evaluate(OopsState state);
+    public OopsCode(OopsClass clase) {
+		super(clase);
+		// TODO Auto-generated constructor stub
+	}
+
+	public abstract OopsObject evaluate(OopsState state);
     
 }

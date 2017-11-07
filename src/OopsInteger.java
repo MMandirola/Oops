@@ -10,14 +10,14 @@ public class OopsInteger extends OopsObject{
 		this.value = value;
 	}
 
-	public OopsInteger(Integer value){
+	public OopsInteger(Integer value, OopsClass clase){
+		super(clase);
 		this.value = value;
-
-		methodReference.put("+", new OopsSum());
-		methodReference.put("-", new OopsSub());
-		methodReference.put("*", new OopsTimes());
-		methodReference.put("<=", new OopsLTE());
-		methodReference.put("==", new OopsEquals());
-		methodReference.put("!=", new OopsDistinct());
+		this.clase.methodReference.put("+", new OopsSum());
+		this.clase.methodReference.put("-", new OopsSub());
+		this.clase.methodReference.put("*", new OopsTimes());
+		this.clase.methodReference.put("<=", new OopsLTE());
+		this.clase.methodReference.put("==", new OopsEquals());
+		this.clase.methodReference.put("!=", new OopsDistinct());
 	}
 }

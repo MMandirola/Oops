@@ -5,7 +5,8 @@ public class OopsValue extends OopsCode{
 	public OopsObject evaluate(OopsState state) {
 		return value;
 	}
-	public OopsValue(OopsObject value) {
+	public OopsValue(OopsObject value, OopsClass clase) {
+		super(clase);
 		this.value = value;
 	}
 	public OopsObject getValue() {

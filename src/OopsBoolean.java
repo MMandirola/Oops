@@ -10,11 +10,11 @@ public class OopsBoolean extends OopsObject{
 		this.value = value;
 	}
 	
-	public OopsBoolean(boolean value) {
+	public OopsBoolean(boolean value, OopsClass clase) {
+		super(clase);
 		this.value = value;
-		
-		methodReference.put("!", new OopsNot());
-		methodReference.put("&&", new OopsAnd());
-		methodReference.put("||", new OopsOr());
+		this.clase.methodReference.put("!", new OopsNot());
+		this.clase.methodReference.put("&&", new OopsAnd());
+		this.clase.methodReference.put("||", new OopsOr());
 	}
 }
