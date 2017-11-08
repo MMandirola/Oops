@@ -39,7 +39,7 @@ public class OopsVariable extends OopsCode{
 
     @Override
     public OopsObject evaluate(OopsState state) {
-        return state.state.get(var);
+        return state.state.get(var).value;
     }
     
     
