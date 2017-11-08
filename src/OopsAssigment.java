@@ -22,7 +22,13 @@ public class OopsAssigment extends OopsCode{
     public OopsObject evaluate(OopsState state) {
         
        OopsObject res = obj.evaluate(state);
-       return state.state.put(var.getVar(), res);
+       OopsCell val = state.state.getOrDefault(var.getVar(), null);
+       if(val == null){
+    	   val = new OopsCell(null);
+       }
+       val.value = res;
+       state.state.put(var.getVar(), val);
+       return res;
     }
     
     

@@ -3,14 +3,17 @@ import java.util.HashMap;
 
 public class OopsBlock extends OopsCode{
 	OopsVariable[] vars;
-	OopsSequence block;
+	OopsCode block;
 	@Override
 	public OopsObject evaluate(OopsState state) {
-		HashMap<String,OopsObject> myState = new HashMap<>();
+		HashMap<String,OopsCell> myState = (HashMap<String, OopsCell>) state.state.clone();
 		for(OopsVariable var:vars){
+			OopsObject varValue = null;
 			if(state.state.containsKey(var.getVar())){
-				myState.put(var.getVar(), state.state.get(var.getVar()));
+				varValue = state.state.get(var.getVar()).value;
 			}
+			OopsCell cell = new OopsCell(varValue);
+			myState.put(var.getVar(), cell);
 		}
 		return this.block.evaluate(new OopsState(myState));
 	}// TODO Auto-generated constructor stub
