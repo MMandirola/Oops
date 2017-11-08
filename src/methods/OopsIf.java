@@ -17,8 +17,9 @@ public class OopsIf extends OopsMethod{
 			return block.evaluate(state);
 		}
 		else{
-			return null;
-		}
+			block = (OopsBlock) args[1];
+                        return block.evaluate(state);
+		}       
 	}
 
 }
