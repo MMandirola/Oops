@@ -14,8 +14,7 @@ public class OopsBlock extends OopsCode{
 		}
 		return this.block.evaluate(new OopsState(myState));
 	}// TODO Auto-generated constructor stub
-	public OopsBlock(OopsVariable[] vars, OopsSequence block, OopsClass clase) {
-		super(clase);
+	public OopsBlock(OopsVariable[] vars, OopsSequence block) {
 		this.vars = vars;// TODO Auto-generated constructor stub
 		this.block = block;
 	}

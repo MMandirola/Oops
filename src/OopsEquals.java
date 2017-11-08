@@ -6,7 +6,7 @@ public class OopsEquals extends OopsMethod{
 		OopsInteger left = (OopsInteger) self;
 		OopsInteger right = (OopsInteger) args[0];
 		
-		return new OopsBoolean(left.getValue() == right.getValue(), new OopsClass("Boolean", null));
+		return new OopsBoolean(left.getValue() == right.getValue());
 	}
 	
 }

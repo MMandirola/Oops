@@ -5,7 +5,7 @@ public class OopsNot extends OopsMethod{
 	OopsObject evaluate(OopsObject self, OopsObject[] args, OopsState state) {
 		OopsBoolean value = (OopsBoolean) self;
 		
-		return new OopsBoolean(!value.isValue(), new OopsClass("Boolean", null));
+		return new OopsBoolean(!value.isValue());
 	}
 	
 }

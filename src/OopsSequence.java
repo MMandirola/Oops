@@ -15,8 +15,7 @@ public void setSentences(OopsCode[] sentences) {
 		return resultado;
 		
 	}
-	public OopsSequence(OopsCode[] sentences, OopsClass clase) {
-		super(clase);
+	public OopsSequence(OopsCode[] sentences) {
 		this.sentences = sentences;
 	}
 }

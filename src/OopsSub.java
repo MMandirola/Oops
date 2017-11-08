@@ -6,7 +6,7 @@ public class OopsSub extends OopsMethod{
 		OopsInteger left = (OopsInteger) self;
 		OopsInteger right = (OopsInteger) args[0];
 		
-		return new OopsInteger(left.getValue() - right.getValue(), new OopsClass("Integer", null));
+		return new OopsInteger(left.getValue() - right.getValue());
 	}
 	
 }

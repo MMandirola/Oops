@@ -9,8 +9,7 @@ public class OopsMessage extends OopsCode{
     private OopsCode[] args;
     private OopsCode receiver;
     
-    public OopsMessage(String xselector, OopsCode[] xargs, OopsCode xreceiver, OopsClass clase){
-    		super(clase);
+    public OopsMessage(String xselector, OopsCode[] xargs, OopsCode xreceiver){
             this.selector = xselector;
             this.args = xargs;
             this.receiver = xreceiver;

@@ -16,8 +16,7 @@ public class OopsVariable extends OopsCode{
     private String var;
     
     
-    public OopsVariable(String xvar, OopsClass clase){
-    	super(clase);
+    public OopsVariable(String xvar){
     	this.clase = clase;
         this.var = xvar;
     }

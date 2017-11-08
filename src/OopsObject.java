@@ -1,8 +1,7 @@
-import java.util.HashMap;
-import java.util.Map;
+
 
 public abstract class OopsObject {
-	public OopsClass clase;
+	public OopsClass clase = OopsClass.getInstance();
 	public OopsObject respond(String name, OopsObject[] args, OopsState state) {
 		OopsObject result = null;
 		
@@ -13,11 +12,5 @@ public abstract class OopsObject {
 		}
 		
 		return result;
-	}
-	public OopsObject(OopsClass clase){
-		this.clase = clase;
-		if (this.clase != null){
-			this.clase.methodReference.put("class", new OopsClassMethod());
-		}
 	}
 }

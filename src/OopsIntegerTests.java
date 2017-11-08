@@ -7,8 +7,8 @@ public class OopsIntegerTests {
 
 	@Test
 	public void testAddTwoNumbers() {
-		OopsInteger numberOne = new OopsInteger(2, new OopsClass("Integer",null));
-		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(2, new OopsClass("Integer",null))};
+		OopsInteger numberOne = new OopsInteger(2);
+		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(2)};
 		
 		OopsInteger result = (OopsInteger) numberOne.respond("+", numberTwo, null);
 		
@@ -17,8 +17,8 @@ public class OopsIntegerTests {
 	
 	@Test
 	public void testSubstractTwoNumbers() {
-		OopsInteger numberOne = new OopsInteger(2, new OopsClass("Integer",null));
-		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(1, new OopsClass("Integer",null))};
+		OopsInteger numberOne = new OopsInteger(2);
+		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(1)};
 		
 		OopsInteger result = (OopsInteger) numberOne.respond("-", numberTwo, null);
 		
@@ -27,8 +27,8 @@ public class OopsIntegerTests {
 	
 	@Test
 	public void testMultiplyTwoNumbers() {
-		OopsInteger numberOne = new OopsInteger(2, new OopsClass("Integer",null));
-		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3, new OopsClass("Integer",null))};
+		OopsInteger numberOne = new OopsInteger(2);
+		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3)};
 		
 		OopsInteger result = (OopsInteger) numberOne.respond("*", numberTwo, null);
 		
@@ -37,8 +37,8 @@ public class OopsIntegerTests {
 	
 	@Test
 	public void testLTETwoNumbers() {
-		OopsInteger numberOne = new OopsInteger(2, new OopsClass("Integer",null));
-		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3, new OopsClass("Integer",null))};
+		OopsInteger numberOne = new OopsInteger(2);
+		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3)};
 		
 		OopsBoolean result = (OopsBoolean) numberOne.respond("<=", numberTwo, null);
 		
@@ -47,8 +47,8 @@ public class OopsIntegerTests {
 	
 	@Test
 	public void testEqualsTwoNumbers() {
-		OopsInteger numberOne = new OopsInteger(2, new OopsClass("Integer",null));
-		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3, new OopsClass("Integer",null))};
+		OopsInteger numberOne = new OopsInteger(2);
+		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3)};
 		
 		OopsBoolean result = (OopsBoolean) numberOne.respond("==", numberTwo, null);
 		
@@ -57,8 +57,8 @@ public class OopsIntegerTests {
 	
 	@Test
 	public void testDistinctTwoNumbers() {
-		OopsInteger numberOne = new OopsInteger(2, new OopsClass("Integer",null));
-		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3, new OopsClass("Integer",null))};
+		OopsInteger numberOne = new OopsInteger(2);
+		OopsInteger[] numberTwo = new OopsInteger[]{ new OopsInteger(3)};
 		
 		OopsBoolean result = (OopsBoolean) numberOne.respond("!=", numberTwo, null);
 		
