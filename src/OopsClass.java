@@ -4,6 +4,7 @@ import java.util.Map;
 
 public class OopsClass extends OopsObject{
 	private final static OopsClass instance = new OopsClass("OopsClass");
+	private OopsClass clase = OopsIntegerClass.getInstance();
 	
 	public final String name;
 	public Map<String, OopsMethod> methodReference = new HashMap<String, OopsMethod>();
