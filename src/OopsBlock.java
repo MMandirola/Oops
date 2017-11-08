@@ -2,6 +2,8 @@ import java.util.HashMap;
 
 
 public class OopsBlock extends OopsCode{
+	private OopsClass clase = OopsBlockClass.getInstance();
+	
 	OopsVariable[] vars;
 	OopsCode block;
 	@Override
