@@ -20,8 +20,5 @@ public class OopsBoolean extends OopsObject{
 	
 	public OopsBoolean(boolean value) {
 		this.value = value;
-		this.clase.methodReference.put("!", new OopsNot());
-		this.clase.methodReference.put("&&", new OopsAnd());
-		this.clase.methodReference.put("||", new OopsOr());
 	}
 }
