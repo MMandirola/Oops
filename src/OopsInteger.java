@@ -1,5 +1,5 @@
 public class OopsInteger extends OopsObject{
-	
+	private OopsClass clase = OopsIntegerClass.getInstance();
 	private Integer value;
 	
 	public Integer getValue() {
@@ -10,8 +10,7 @@ public class OopsInteger extends OopsObject{
 		this.value = value;
 	}
 
-	public OopsInteger(Integer value, OopsClass clase){
-		super(clase);
+	public OopsInteger(Integer value){
 		this.value = value;
 		this.clase.methodReference.put("+", new OopsSum());
 		this.clase.methodReference.put("-", new OopsSub());

@@ -12,8 +12,7 @@ public class OopsAssigment extends OopsCode{
     OopsVariable var;
     OopsCode obj;
     
-    public OopsAssigment(OopsVariable xvar, OopsCode xobj, OopsClass clase){
-    	super(clase);
+    public OopsAssigment(OopsVariable xvar, OopsCode xobj){
         this.var = xvar;
         this.obj = xobj;
     }

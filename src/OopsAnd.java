@@ -5,6 +5,6 @@ public class OopsAnd extends OopsMethod{
 		OopsBoolean left = (OopsBoolean) self;
 		OopsBoolean right = (OopsBoolean) args[0];
 		
-		return new OopsBoolean(left.isValue() && right.isValue(), new OopsClass("Boolean", null));
+		return new OopsBoolean(left.isValue() && right.isValue());
 	}
 }
