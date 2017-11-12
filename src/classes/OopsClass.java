@@ -2,14 +2,14 @@ package classes;
 import java.util.HashMap;
 import java.util.Map;
 
-import objects.OopsMethod;
 import objects.OopsObject;
 import methods.OopsClassMethod;
+import methods.OopsMethod;
 
 
 public class OopsClass extends OopsObject{
 	private final static OopsClass instance = new OopsClass("OopsClass");
-	private OopsClass clase = OopsIntegerClass.getInstance();
+	private OopsClass clase = null;
 	
 	public final String name;
 	public Map<String, OopsMethod> methodReference = new HashMap<String, OopsMethod>();

@@ -1,5 +1,7 @@
 package objects;
 
+import utils.OopsState;
+
 
 public class OopsValue extends OopsCode{
 	private OopsObject value;

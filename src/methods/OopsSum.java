@@ -1,8 +1,7 @@
 package methods;
 import objects.OopsInteger;
-import objects.OopsMethod;
 import objects.OopsObject;
-import objects.OopsState;
+import utils.OopsState;
 
 
 public class OopsSum extends OopsMethod{

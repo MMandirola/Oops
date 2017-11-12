@@ -1,5 +1,7 @@
 package objects;
 
+import utils.OopsState;
+
 public class OopsSequence extends OopsCode{
 OopsCode[] sentences;
 public OopsCode[] getSentences() {

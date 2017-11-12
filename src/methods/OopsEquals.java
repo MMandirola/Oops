@@ -1,9 +1,8 @@
 package methods;
 import objects.OopsBoolean;
 import objects.OopsInteger;
-import objects.OopsMethod;
 import objects.OopsObject;
-import objects.OopsState;
+import utils.OopsState;
 
 
 public class OopsEquals extends OopsMethod{

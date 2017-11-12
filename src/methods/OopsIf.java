@@ -2,9 +2,8 @@ package methods;
 
 import objects.OopsBlock;
 import objects.OopsBoolean;
-import objects.OopsMethod;
 import objects.OopsObject;
-import objects.OopsState;
+import utils.OopsState;
 
 
 public class OopsIf extends OopsMethod{

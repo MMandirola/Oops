@@ -1,8 +1,7 @@
 package methods;
 import objects.OopsBoolean;
-import objects.OopsMethod;
 import objects.OopsObject;
-import objects.OopsState;
+import utils.OopsState;
 
 
 public class OopsNot extends OopsMethod{

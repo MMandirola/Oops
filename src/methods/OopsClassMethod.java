@@ -1,7 +1,6 @@
 package methods;
-import objects.OopsMethod;
 import objects.OopsObject;
-import objects.OopsState;
+import utils.OopsState;
 
 
 public class OopsClassMethod extends OopsMethod{
