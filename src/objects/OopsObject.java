@@ -1,12 +1,15 @@
 package objects;
 
+import java.util.HashMap;
+
 import utils.OopsState;
 import classes.OopsClass;
 
-
-
 public abstract class OopsObject {
+	private HashMap<String, OopsObject> properties = new HashMap<String, OopsObject>();
+	
 	public OopsClass clase = OopsClass.getInstance();
+	
 	public OopsObject respond(String name, OopsObject[] args, OopsState state) {
 		OopsObject result = null;
 		
@@ -17,5 +20,13 @@ public abstract class OopsObject {
 		}
 		
 		return result;
+	}
+	
+	public OopsObject getProperty(String key){
+		return properties.get(key);
+	}
+	
+	public void setProperty(String key, OopsObject value){
+		properties.put(key, value);
 	}
 }
