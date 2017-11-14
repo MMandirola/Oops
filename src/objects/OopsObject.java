@@ -1,5 +1,6 @@
 package objects;
 
+import utils.OopsState;
 import classes.OopsClass;
 
 

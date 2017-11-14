@@ -1,5 +1,7 @@
 package objects;
 
+import utils.OopsState;
+
 /**
  *
  * @author emanuel

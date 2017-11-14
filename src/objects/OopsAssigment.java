@@ -1,5 +1,8 @@
 package objects;
 
+import utils.OopsCell;
+import utils.OopsState;
+
 
 /**
  *

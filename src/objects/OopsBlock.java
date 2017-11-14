@@ -2,6 +2,9 @@ package objects;
 
 import java.util.HashMap;
 
+import utils.OopsCell;
+import utils.OopsState;
+
 import classes.OopsBlockClass;
 import classes.OopsClass;
 
@@ -26,7 +29,7 @@ public class OopsBlock extends OopsCode{
 		}
 		return this.block.evaluate(new OopsState(myState));
 	}// TODO Auto-generated constructor stub
-	public OopsBlock(OopsVariable[] vars, OopsSequence block) {
+	public OopsBlock(OopsVariable[] vars, OopsCode block) {
 		this.vars = vars;// TODO Auto-generated constructor stub
 		this.block = block;
 	}

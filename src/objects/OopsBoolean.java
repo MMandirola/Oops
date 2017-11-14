@@ -7,7 +7,6 @@ import classes.OopsBooleanClass;
 import classes.OopsClass;
 
 public class OopsBoolean extends OopsObject{
-	private OopsClass clase = OopsBooleanClass.getInstance();
 	private boolean value;
 	
 	public boolean isValue() {
@@ -19,6 +18,7 @@ public class OopsBoolean extends OopsObject{
 	}
 	
 	public OopsBoolean(boolean value) {
+		this.clase = clase = OopsBooleanClass.getInstance();
 		this.value = value;
 	}
 }

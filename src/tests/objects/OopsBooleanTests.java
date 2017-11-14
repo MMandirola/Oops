@@ -1,9 +1,10 @@
 package tests.objects;
 import static org.junit.Assert.*;
 import objects.OopsBoolean;
-import objects.OopsState;
 
 import org.junit.Test;
+
+import utils.OopsState;
 
 
 public class OopsBooleanTests {
@@ -14,7 +15,12 @@ public class OopsBooleanTests {
 		OopsBoolean result = (OopsBoolean) value.respond("!", null, new OopsState(null));
 		assertTrue(result.isValue());
 	}
-	
+	@Test
+	public void testNot2() {
+		OopsBoolean value = new OopsBoolean(true);
+		OopsBoolean result = (OopsBoolean) value.respond("!", null, new OopsState(null));
+		assertTrue(!result.isValue());
+	}
 	@Test
 	public void TestAnd() {
 		OopsBoolean value1 = new OopsBoolean(true);

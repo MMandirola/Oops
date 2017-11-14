@@ -10,7 +10,6 @@ import classes.OopsClass;
 import classes.OopsIntegerClass;
 
 public class OopsInteger extends OopsObject{
-	private OopsClass clase = OopsIntegerClass.getInstance();
 	private Integer value;
 	
 	public Integer getValue() {
@@ -22,6 +21,7 @@ public class OopsInteger extends OopsObject{
 	}
 
 	public OopsInteger(Integer value){
+		this.clase = OopsIntegerClass.getInstance();
 		this.value = value;
 	}
 }
