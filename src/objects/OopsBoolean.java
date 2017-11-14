@@ -1,10 +1,6 @@
 package objects;
 
-import methods.OopsAnd;
-import methods.OopsNot;
-import methods.OopsOr;
 import classes.OopsBooleanClass;
-import classes.OopsClass;
 
 public class OopsBoolean extends OopsObject{
 	private boolean value;
@@ -18,7 +14,7 @@ public class OopsBoolean extends OopsObject{
 	}
 	
 	public OopsBoolean(boolean value) {
-		this.clase = clase = OopsBooleanClass.getInstance();
+		this.clase = OopsBooleanClass.getInstance();
 		this.value = value;
 	}
 }

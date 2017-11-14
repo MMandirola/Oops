@@ -1,12 +1,5 @@
 package objects;
 
-import methods.OopsDistinct;
-import methods.OopsEquals;
-import methods.OopsLTE;
-import methods.OopsSub;
-import methods.OopsSum;
-import methods.OopsTimes;
-import classes.OopsClass;
 import classes.OopsIntegerClass;
 
 public class OopsInteger extends OopsObject{

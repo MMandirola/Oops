@@ -7,4 +7,8 @@ public class OopsCodeClass extends OopsClass {
 	private OopsCodeClass(String name){
 		super(name);
 	}
+	
+	public static OopsClass getInstance(){
+		return instance;
+	}
 }
