@@ -22,7 +22,7 @@ public class OopsState {
 		this.state = myState;
 		state.put("Object", new OopsCell(OopsObjectClass.getInstance()));
 	}
-	public OopsState newState(){
+	public static OopsState newState(){
 		return new OopsState(new HashMap<String,OopsCell>());
 	}
     
