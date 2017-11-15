@@ -5,7 +5,7 @@ import classes.OopsClass;
 
 
 
-public abstract class OopsObject {
+public class OopsObject {
 	public OopsClass clase = OopsClass.getInstance();
 	public OopsObject respond(String name, OopsObject[] args, OopsState state) {
 		OopsObject result = null;
@@ -18,4 +18,13 @@ public abstract class OopsObject {
 		
 		return result;
 	}
+        
+        public OopsObject(OopsClass xclase){
+                this.clase = xclase;
+        
+        } 
+        
+        public OopsObject(){
+        
+        } 
 }
